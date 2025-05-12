@@ -15,10 +15,18 @@ class MyElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: () {
+        print(MediaQuery.sizeOf(context));
+      },
       style: ElevatedButton.styleFrom(
         backgroundColor: buttonColor,
-        minimumSize: Size(MediaQuery.sizeOf(context).width * 0.6, 75),
+        minimumSize:
+            MediaQuery.sizeOf(context).height > 600
+                ? Size(MediaQuery.sizeOf(context).width * 0.6, 75)
+                : Size(
+                  MediaQuery.sizeOf(context).width * 0.6,
+                  MediaQuery.sizeOf(context).height * 0.1,
+                ),
       ),
       child: Text(
         title,

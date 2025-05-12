@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:santobono_gui/src/utils/AppInfo.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AccessTopBar extends StatelessWidget {
   const AccessTopBar({super.key});
@@ -24,6 +25,18 @@ class AccessTopBar extends StatelessWidget {
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(60),
           bottomRight: Radius.circular(60),
+        ),
+      ),
+      child: Center(
+        child: SvgPicture.asset(
+          AppInfo.logoPath,
+          width: MediaQuery.sizeOf(context).width * 0.4,
+          height: MediaQuery.sizeOf(context).height * 0.2,
+          fit: BoxFit.cover,
+          colorFilter: ColorFilter.mode(
+            Theme.of(context).colorScheme.onPrimary,
+            BlendMode.srcIn,
+          ),
         ),
       ),
     );

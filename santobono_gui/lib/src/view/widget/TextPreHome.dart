@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TextProHome extends StatelessWidget {
-  const TextProHome({super.key});
+class TextPreHome extends StatelessWidget {
+  const TextPreHome({super.key});
   // L’altezza “preferita” per un AppBar standard
 
   //TODO AGGIUSARE IL TESTO E RENDERLO ADDATIVO
@@ -12,9 +12,10 @@ class TextProHome extends StatelessWidget {
         Text(
           'Rimani Aggiornato',
           style: TextStyle(
-            fontSize: 25,
+            fontSize: MediaQuery.sizeOf(context).height > 850 ? 30 : 22,
             fontWeight: FontWeight.bold,
-            color: Color(0xFF6D1E3A), // Colore marrone scuro
+            color:
+                Theme.of(context).colorScheme.primary, // Colore marrone scuro
           ),
         ),
         SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),
@@ -25,8 +26,8 @@ class TextProHome extends StatelessWidget {
           'in tempo reale',
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: 18,
-            color: Color(0xFF2F4A5D), // Colore blu scuro
+            fontSize: MediaQuery.sizeOf(context).height > 850 ? 18 : 12,
+            color: Theme.of(context).colorScheme.secondary, // Colore blu scuro
           ),
         ),
       ],

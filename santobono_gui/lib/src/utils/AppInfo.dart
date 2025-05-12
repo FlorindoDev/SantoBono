@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppInfo {
   static const String appName = "MyApp";
+  static const String logoPath = "assets/images/LogoSantobonoCurve.svg";
   static const String appVersion = "1.0.0";
   static const String apiBaseUri = "https://api.example.com";
   static final ThemeData lightMode = ThemeData(
@@ -33,10 +34,18 @@ class AppInfo {
       textTheme: ButtonTextTheme.primary,
     ),*/
     textTheme: const TextTheme(
-      bodyMedium: TextStyle(
-        fontSize: 25,
-        fontWeight: FontWeight.w600,
-        color: Color.fromARGB(255, 255, 255, 255),
+      bodyMedium: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
+
+      bodySmall: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+    ),
+
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        textStyle: const TextStyle(
+          fontSize: 25,
+          fontWeight: FontWeight.w600,
+          color: Color.fromARGB(255, 255, 255, 255),
+        ),
       ),
     ),
 
