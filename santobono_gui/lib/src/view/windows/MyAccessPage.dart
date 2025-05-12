@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 //import 'package:santobono_gui/src/view/widget/SmallAppBar.dart';
-import 'package:santobono_gui/src/view/widget/AccessTopBar.dart';
-import 'package:santobono_gui/src/view/widget/ContentPreHomePage.dart';
+import 'package:santobono_gui/src/view/widget/PreHome/AccessTopBar.dart';
+import 'package:santobono_gui/src/view/widget/PreHome/ContentPreHomePage.dart';
 
 class MyAccessPage extends StatefulWidget {
   const MyAccessPage({super.key});
@@ -12,15 +12,6 @@ class MyAccessPage extends StatefulWidget {
 }
 
 class _MyAccessPageState extends State<MyAccessPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  //TODO AGGIUSARE OVERFLOW PIXEL quanso la schermata è troppo piccola
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,4 +47,3 @@ class _MyAccessPageState extends State<MyAccessPage> {
     );
   }
 }
-//I/flutter (27698): Size(411.4, 820.6)

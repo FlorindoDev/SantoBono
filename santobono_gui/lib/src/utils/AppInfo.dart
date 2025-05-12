@@ -16,7 +16,7 @@ class AppInfo {
       centerTitle: true,
       titleTextStyle: TextStyle(
         fontSize: 25,
-        fontWeight: FontWeight.w600,
+        fontWeight: FontWeight.bold,
         color: Color.fromARGB(255, 20, 62, 107),
       ),
       iconTheme: IconThemeData(color: Color.fromARGB(255, 20, 62, 107)),
@@ -29,10 +29,7 @@ class AppInfo {
       secondary: Color.fromARGB(255, 20, 62, 107),
     ),
 
-    /*buttonTheme: const ButtonThemeData(
-
-      textTheme: ButtonTextTheme.primary,
-    ),*/
+    //TODO Aggiustare i text
     textTheme: const TextTheme(
       bodyMedium: TextStyle(fontSize: 25, fontWeight: FontWeight.w600),
 

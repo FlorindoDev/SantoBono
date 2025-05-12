@@ -4,7 +4,7 @@ class TextPreHome extends StatelessWidget {
   const TextPreHome({super.key});
   // L’altezza “preferita” per un AppBar standard
 
-  //TODO AGGIUSARE IL TESTO E RENDERLO ADDATIVO
+  //TODO mettere uno stile per il teso uguale per tutti
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -12,7 +12,7 @@ class TextPreHome extends StatelessWidget {
         Text(
           'Rimani Aggiornato',
           style: TextStyle(
-            fontSize: MediaQuery.sizeOf(context).height > 850 ? 30 : 22,
+            fontSize: MediaQuery.sizeOf(context).height > 850 ? 26 : 22,
             fontWeight: FontWeight.bold,
             color:
                 Theme.of(context).colorScheme.primary, // Colore marrone scuro
@@ -26,7 +26,7 @@ class TextPreHome extends StatelessWidget {
           'in tempo reale',
           textAlign: TextAlign.center,
           style: TextStyle(
-            fontSize: MediaQuery.sizeOf(context).height > 850 ? 18 : 12,
+            fontSize: MediaQuery.sizeOf(context).height > 850 ? 16 : 13,
             color: Theme.of(context).colorScheme.secondary, // Colore blu scuro
           ),
         ),

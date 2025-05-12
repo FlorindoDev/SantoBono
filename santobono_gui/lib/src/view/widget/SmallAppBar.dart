@@ -23,8 +23,7 @@ class SmallAppBar extends StatelessWidget implements PreferredSizeWidget {
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back_ios_new),
                 onPressed: () {
-                  print(MediaQuery.sizeOf(context));
-                  print(constraints.maxWidth * 0.08);
+                  Navigator.pop(context);
                 },
               ),
               title: Text(title),

@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:santobono_gui/src/utils/AppInfo.dart';
 import 'package:santobono_gui/src/view/windows/MyAccessPage.dart';
 import 'package:flutter/services.dart';
+import 'package:santobono_gui/src/view/windows/HomePage.dart';
 
-void main() {
+void main() async {
+  // Inizializza i binding di Flutter prima di eseguire qualsiasi codice
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Consentie solo portrait up (verticale normale).
+  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   runApp(const MyApp());
 }
 
@@ -14,7 +21,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: AppInfo.appName,
       theme: AppInfo.lightMode,
-      home: const MyAccessPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MyAccessPage(),
+        '/HomePage': (context) => const HomePage(),
+      },
     );
   }
 }
