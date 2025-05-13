@@ -11,16 +11,16 @@ class AccessTopBar extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: double.infinity, //MediaQuery.of(context).size.height * 0.55,
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
           colors: [
-            Color.fromARGB(255, 223, 11, 32), // rosso profondo
-            Color(0xFF003D54), // blu petrolio
-            Color.fromARGB(255, 223, 11, 32), // rosa acceso
+            Theme.of(context).colorScheme.primary, // rosso profondo
+            Theme.of(context).colorScheme.secondary, // blu petrolio
+            Theme.of(context).colorScheme.primary, // rosa acceso // rosa acceso
           ],
-          stops: [0.0, 0.6, 1.0],
+          stops: [0.1, 0.55, 0.9],
         ),
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(60),

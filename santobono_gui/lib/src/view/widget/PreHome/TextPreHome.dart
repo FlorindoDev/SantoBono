@@ -11,12 +11,10 @@ class TextPreHome extends StatelessWidget {
       children: [
         Text(
           'Rimani Aggiornato',
-          style: TextStyle(
-            fontSize: MediaQuery.sizeOf(context).height > 850 ? 26 : 22,
-            fontWeight: FontWeight.bold,
-            color:
-                Theme.of(context).colorScheme.primary, // Colore marrone scuro
-          ),
+          style:
+              MediaQuery.sizeOf(context).height > 850
+                  ? Theme.of(context).textTheme.titleMedium
+                  : Theme.of(context).textTheme.titleSmall,
         ),
         SizedBox(height: MediaQuery.sizeOf(context).height * 0.02),
         Text(
@@ -25,10 +23,10 @@ class TextPreHome extends StatelessWidget {
           'per rimanere sempre aggiornato\n'
           'in tempo reale',
           textAlign: TextAlign.center,
-          style: TextStyle(
-            fontSize: MediaQuery.sizeOf(context).height > 850 ? 16 : 13,
-            color: Theme.of(context).colorScheme.secondary, // Colore blu scuro
-          ),
+          style:
+              MediaQuery.sizeOf(context).height > 850
+                  ? Theme.of(context).textTheme.bodyMedium
+                  : Theme.of(context).textTheme.bodySmall,
         ),
       ],
     );
