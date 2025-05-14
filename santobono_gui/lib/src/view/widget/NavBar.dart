@@ -53,7 +53,7 @@ class _NavBarState extends State<NavBar> {
             25,
             'assets/images/campanella.svg',
           ),
-          label: 'Account',
+          label: 'Notifiche',
         ),
       ],
     );
