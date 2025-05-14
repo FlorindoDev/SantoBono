@@ -7,11 +7,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 class InfoReparti extends StatelessWidget {
   const InfoReparti({super.key});
 
-  static const double? paddingCard = 20;
+  static const double? paddingCard = 10;
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      padding: EdgeInsets.only(left: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -55,6 +56,17 @@ class InfoReparti extends StatelessWidget {
                       'assets/images/Cervello.svg',
                     ),
                     reparto: 'Neurologia',
+                    onTap: () => print('Neurologia'),
+                  ),
+                  const SizedBox(width: paddingCard), // spaziatura
+                  InfoCardReparti(
+                    icon: AppInfo.SvgIcon(
+                      Theme.of(context).colorScheme.onPrimary,
+                      50,
+                      50,
+                      'assets/images/rianimazione.svg',
+                    ),
+                    reparto: 'Esempio',
                     onTap: () => print('Neurologia'),
                   ),
                 ],
