@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:santobono_gui/src/view/widget/SmallAppBar.dart';
 import 'package:santobono_gui/src/view/widget/Home/InfoReparti.dart';
 import 'package:santobono_gui/src/view/widget/NavBar.dart';
+import 'package:santobono_gui/src/view/widget/Home/Affolamento.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -32,6 +33,7 @@ class _HomePageState extends State<HomePage> {
             'Affollamento nel pronto Soccorso:',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
+          TriageLegend(),
         ],
       ),
     );
