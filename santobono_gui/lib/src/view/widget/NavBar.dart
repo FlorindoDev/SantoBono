@@ -23,21 +23,36 @@ class _NavBarState extends State<NavBar> {
       selectedIndex: currentPageIndex,
       destinations: <Widget>[
         NavigationDestination(
-          selectedIcon: Icon(Icons.home),
-          icon: Icon(Icons.home_outlined),
-          label: 'Notifiche',
+          icon: AppInfo.SvgIcon(
+            Theme.of(context).colorScheme.onPrimary,
+            25,
+            25,
+            'assets/images/Home.svg',
+          ),
+          label: 'Home',
+        ),
+        NavigationDestination(
+          selectedIcon: AppInfo.SvgIcon(
+            Theme.of(context).colorScheme.onPrimary,
+            25,
+            25,
+            'assets/images/calendario.svg',
+          ),
+          icon: AppInfo.SvgIcon(
+            Theme.of(context).colorScheme.onPrimary,
+            25,
+            25,
+            'assets/images/calendario.svg',
+          ),
+          label: 'Turni',
         ),
         NavigationDestination(
           icon: AppInfo.SvgIcon(
             Theme.of(context).colorScheme.onPrimary,
             25,
             25,
-            'assets/images/Ortopedia.svg',
+            'assets/images/campanella.svg',
           ),
-          label: 'Turni',
-        ),
-        NavigationDestination(
-          icon: Badge(child: Icon(Icons.messenger_sharp)),
           label: 'Account',
         ),
       ],
