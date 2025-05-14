@@ -2,5 +2,5 @@
 
 Questa App è stata creata come prototipo per un tirocinio al ospedale di napoli santobono
 
-<img src="./Linee guida app"></a>
+![Linee guida app.svg](https://github.com/FlorindoDev/SantoBono/Linee_guida_app.svg)
 
